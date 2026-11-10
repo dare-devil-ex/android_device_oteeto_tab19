@@ -1,0 +1,46 @@
+#
+# BoardConfig.mk — OTEETO TAB19 (tab19)
+# Real hardware values (spoof removed).
+#
+DEVICE_PATH := device/OTEETO/tab19
+
+# Architecture
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_VARIANT := cortex-a53
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
+
+# Platform
+TARGET_BOARD_PLATFORM := mt6753
+TARGET_BOOTLOADER_BOARD_NAME := mt6753
+
+# Kernel
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/OTEETO/tab19
+TARGET_KERNEL_CONFIG := k50v1_64_defconfig
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
+BOARD_KERNEL_BASE := 0x40078000
+BOARD_KERNEL_PAGESIZE := 2048
+TARGET_PREBUILT_KERNEL := /home/wkaie/ddex/TAB19_OTEETO_V1.0_20250710/brick-recovery critical/boot/dt_work/dt_work/kernel
+BOARD_PREBUILT_DTBIMAGE_DIR := /home/wkaie/ddex/TAB19_OTEETO_V1.0_20250710/brick-recovery critical/boot/dt_work/dt_work
+
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_RECOVERY_SWIPE := true
+BOARD_USES_MTK_HARDWARE := true
+TARGET_USES_MTK_HARDWARE := true
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := tab19,TAB19,mt6753
+
+# Inherit vendor
+-include vendor/OTEETO/tab19/BoardConfigVendor.mk

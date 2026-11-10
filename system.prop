@@ -1,0 +1,19 @@
+# Hardware/system props from real build.prop
+# Version strings removed (spoof targets)
+
+ro.sf.lcd_density=210
+ro.opengles.version=196609
+ro.zygote.preload.enable=0
+qemu.hw.mainkeys=0
+rild.libpath=mtk-ril.so
+rild.libargs=-d /dev/ttyC0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
+dalvik.vm.isa.arm64.variant=cortex-a53
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.isa.arm.variant=cortex-a53
+dalvik.vm.isa.arm.features=default
+ro.mtk_shared_sdcard=1
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1

@@ -1,0 +1,4 @@
+# fstab.mt6753 — placeholder
+# Extract the real one from the stock ramdisk:
+#   ls dt_work/ramdisk_extracted/ | grep fstab
+# Then rerun with --fstab <path>
